@@ -1,6 +1,3 @@
-{
-  "ovpn_file":[
-    {"id":0,"file":"
 Automatically generated OpenVPN client config file
 # Generated on Thu Dec 22 22:50:07 2022 by united-state-server-vpn-vm
 # Note: this config file contains inline private keys
@@ -201,6 +198,3 @@ e129dd4fd8291d3ec424f1aeecc843c1
 ## fL3uWyGF6yq5foWlBsvaGUJyIoaSSCbmDtxfvSFPSyE+zGI0ZUk7nDdA6xoZgNs5
 ## 92e7akZKlC/WxSfKLVn3k6D0ebzQObG4yoUCFE9wWjjNRrTMO1L8U9OI7DXUSDTL
 ## -----END CERTIFICATE-----
-     
-    ]
-}
