@@ -1,10 +1,10 @@
 {
   "ads":"true",
   "update":[{
-    "version":"",
+    "version":"1.0",
     "title":"Note",
     "description":"If you have installed any other vpn app kindly uninstall it otherwise you won't be able to connect to our VPN",
-    "size":""
+    "size":"https://git.io/JeY69"
   }],
   "blocked":[
     {"id":0, "app":"com.android.game"},
