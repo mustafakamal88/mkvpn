@@ -1,6 +1,8 @@
 {
   "ovpn_file":[
-    {"id":0,"file":"lient
+    {"id":0,"file":"
+setenv FORWARD_COMPATIBLE 1
+client
 server-poll-timeout 4
 nobind
 remote 34.170.71.164 1194 udp
@@ -13,11 +15,16 @@ remote 34.170.71.164 1194 udp
 remote 34.170.71.164 1194 udp
 dev tun
 dev-type tun
-remote-cert-tls server
-tls-version-min 1.2
+ns-cert-type server
+setenv opt tls-version-min 1.0 or-highest
 reneg-sec 604800
+sndbuf 0
+rcvbuf 0
+# NOTE: LZO commands are pushed by the Access Server at connect time.
+# NOTE: The below line doesn't disable LZO.
+comp-lzo no
 verb 3
-push-peer-info
+setenv PUSH_PEER_INFO
 
 <ca>
 -----BEGIN CERTIFICATE-----
@@ -38,6 +45,7 @@ GvZNPIPCZ4CVEJ3BaaUZIP65GsYsHw52w0ADfF0aKuMTpW2xgNcdxDXj4gVHYLV1
 u3m7jjaVirfgY2qvEFTTW+v3b06dMVQVqgjzf+A7k5VNiCUGkTtMVdaYWjM=
 -----END CERTIFICATE-----
 </ca>
+
 <cert>
 -----BEGIN CERTIFICATE-----
 MIIC7zCCAdegAwIBAgIBCjANBgkqhkiG9w0BAQsFADAVMRMwEQYDVQQDDApPcGVu
@@ -58,6 +66,7 @@ yHTsFcX5sBpLQX6LP4yVwMkR6pN8GB+oco5XgpaEDXoJ/oGLLwQ3TiJ29iA26/Mq
 C8MBOJ7/c2DgMu0M/WT/XK6vPc4WVGhIGpoco30Lsr3P1RQ=
 -----END CERTIFICATE-----
 </cert>
+
 <key>
 -----BEGIN PRIVATE KEY-----
 MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQD4xEJe558y3v8g
@@ -88,7 +97,9 @@ kGT+aP2G8FAB/136yUZEI7cCzfWLhE3kxzX0gkTtbmxvFsLzGsm/HsRznMc4rMA/
 Uu/pl/PRAI754pGdmVccE06MXQ==
 -----END PRIVATE KEY-----
 </key>
-<tls-crypt>
+
+key-direction 1
+<tls-auth>
 #
 # 2048 bit OpenVPN static key (Server Agent)
 #
@@ -110,6 +121,7 @@ c6361e7a14143f593b54a27e3a467d22
 e129dd4fd8291d3ec424f1aeecc843c1
 7761a19550a53ecd669affdace538e9f
 -----END OpenVPN Static key V1-----
-    </tls-auth>"},
-    {"id":1,"file":""}]
+</tls-auth>"},
+     
+    ]
 }
