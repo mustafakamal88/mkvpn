@@ -40,7 +40,6 @@ GvZNPIPCZ4CVEJ3BaaUZIP65GsYsHw52w0ADfF0aKuMTpW2xgNcdxDXj4gVHYLV1
 u3m7jjaVirfgY2qvEFTTW+v3b06dMVQVqgjzf+A7k5VNiCUGkTtMVdaYWjM=
 -----END CERTIFICATE-----
 </ca>
-
 <cert>
 -----BEGIN CERTIFICATE-----
 MIIC7zCCAdegAwIBAgIBCjANBgkqhkiG9w0BAQsFADAVMRMwEQYDVQQDDApPcGVu
@@ -61,7 +60,6 @@ yHTsFcX5sBpLQX6LP4yVwMkR6pN8GB+oco5XgpaEDXoJ/oGLLwQ3TiJ29iA26/Mq
 C8MBOJ7/c2DgMu0M/WT/XK6vPc4WVGhIGpoco30Lsr3P1RQ=
 -----END CERTIFICATE-----
 </cert>
-
 <key>
 -----BEGIN PRIVATE KEY-----
 MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQD4xEJe558y3v8g
@@ -92,9 +90,7 @@ kGT+aP2G8FAB/136yUZEI7cCzfWLhE3kxzX0gkTtbmxvFsLzGsm/HsRznMc4rMA/
 Uu/pl/PRAI754pGdmVccE06MXQ==
 -----END PRIVATE KEY-----
 </key>
-
-key-direction 1
-<tls-auth>
+<tls-crypt>
 #
 # 2048 bit OpenVPN static key (Server Agent)
 #
